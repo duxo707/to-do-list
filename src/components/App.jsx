@@ -8,9 +8,10 @@ function App () {
         items.push(itemText)
         setItems([...items]);
     }
-    function deleteItem(id) {
+    function deleteItem(id, event) {
       const updatedList = items.filter((item, index) => index !== id);
       setItems(updatedList);
+        event.preventDefault();
     }
     return (
         <div className="container">
